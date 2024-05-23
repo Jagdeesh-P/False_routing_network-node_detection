@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Node Predictor Result</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        body {
+            background-image: url('/static/network.gif');
+            background-size: cover;
+            background-color: #000000; /* Changed background color to black */
+            color: #ffffff; /* Changed text color to white for better contrast */
+        }
+        .container {
+            margin-top: 50px;
+            flex: 1;
+        }
+        h2 {
+            text-shadow: 0 0 0px white;
+            color: #1e90ff; /* Adjusted to a lighter blue for better visibility */
+        }
+        .alert {
+            font-size: 1.2em;
+            background-color: #333333; /* Darker alert background for consistency */
+            color: #1e90ff; /* White text for alert */
+            border: 1px solid #555555; /* Border color for alert */
+        }
+        .btn-primary {
+            background-color: #1e90ff;
+            border-color: #1e90ff;
+        }
+        .btn-primary:hover {
+            background-color: #1c86ee;
+            border-color: #1c86ee;
+        }
+        footer {
+            background-color: #333333;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mt-5 mb-4">Prediction Result</h2>
+        <div class="alert alert-info">
+            <strong>The Node is a {{ prediction }}</strong>
+        </div>
+        <a href="/" class="btn btn-primary">Go Back</a><br><br>
+
+        <div class="card p-3 mb-4" style="font-weight: bold; font-size: 1.2em; background-color: #333333; color: white; border: 1px solid #555555;">
+            <p>Thank you for using the False Routing Network Node Predictor. Accurate node assessment helps in mitigating day-to-day network issues such as incorrect routing updates and unreliable neighbor nodes, ensuring a more stable and secure network environment.</p>
+        </div>
+    </div>
+    <footer>
+        <p style="font-weight: bold; font-size: 1.2em;">Modeled by JAGDEESH-P</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>False Routing Network Node Predictor</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        body {
+            background-image: url('/static/network.gif');
+            background-size: cover;
+            background-color: #000000; /* Changed background color to black */
+            color: #ffffff; /* Changed text color to white for better contrast */
+        }
+        .container {
+            margin-top: 50px;
+            flex: 1;
+        }
+        h2 {
+            text-shadow: 0 0 0px white;
+            color: #1e90ff; /* Adjusted to a lighter blue for better visibility */
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+        .form-control {
+            font-size: 1.2em;
+            background-color: #333333; /* Darker alert background for consistency */
+            color: #1e90ff; /* White text for alert */
+            border: 1px solid #555555; /* Border color for inputs */
+        }
+        .btn-primary {
+            background-color: #1e90ff;
+            border-color: #1e90ff;
+        }
+        .btn-primary:hover {
+            background-color: #1c86ee;
+            border-color: #1c86ee;
+        }
+        footer {
+            background-color: #333333;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <b><h2 class="mt-5 mb-4">False Routing Network Node Predictor</h2></b>
+        <div class="card p-3 mb-4" style="font-weight: bold; font-size: 1.2em; background-color: #333333; color: white; border: 1px solid #555555;">
+            <p>Network nodes play a critical role in maintaining the efficiency and security of data transmission. However, issues such as false routing information can lead to network instability, increased error rates, and security vulnerabilities. Use this predictor to evaluate the performance and trustworthiness of your network nodes based on various parameters.</p>
+        </div>
+        <form action="/" method="POST">
+            <!-- Routing Update Frequency -->
+            <div class="form-group">
+                <label for="routingUpdate">Routing Update Frequency:</label>
+                <select class="form-control" id="routingUpdate" name="routingUpdate" required>
+                    {% for option in routing_update_categories %}
+                        <option value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <!-- Numerical Inputs -->
+            <div class="form-group">
+                <label for="routingTable">Routing Table Consistency:</label>
+                <input type="number" class="form-control" id="routingTable" name="routingTable" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="routeStability">Route Stability:</label>
+                <input type="number" class="form-control" id="routeStability" name="routeStability" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="convergenceTime">Route Convergence Time:</label>
+                <input type="number" class="form-control" id="convergenceTime" name="convergenceTime" step="any" required>
+            </div>
+            <div class="form-group">
+                <label for="errorRate">Route Error Rate:</label>
+                <input type="number" class="form-control" id="errorRate" name="errorRate" step="any" required>
+            </div>
+            <!-- Route Preference -->
+            <div class="form-group">
+                <label for="preference">Route Preference:</label>
+                <select class="form-control" id="preference" name="preference" required>
+                    {% for option in route_preference_categories %}
+                        <option value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <!-- Neighbor Trustworthiness -->
+            <div class="form-group">
+                <label for="trustworthiness">Neighbor Trustworthiness:</label>
+                <select class="form-control" id="trustworthiness" name="trustworthiness" required>
+                    {% for option in trustworthiness_categories %}
+                        <option value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <!-- Packet Inspection -->
+            <div class="form-group">
+                <label for="inspection">Packet Inspection:</label>
+                <select class="form-control" id="inspection" name="inspection" required>
+                    {% for option in packet_inspection_categories %}
+                        <option value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <!-- Historical Behavior -->
+            <div class="form-group">
+                <label for="behavior">Historical Behavior:</label>
+                <select class="form-control" id="behavior" name="behavior" required>
+                    {% for option in historical_behavior_categories %}
+                        <option value="{{ option }}">{{ option }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary">Predict</button><br><br>
+        </form>
+    </div>
+    <footer>
+        <p style="font-weight: bold; font-size: 1.2em;">Modeled by JAGDEESH-P</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
