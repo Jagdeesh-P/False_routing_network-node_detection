@@ -1,6 +1,6 @@
 # False_routing_network-node_detection
 
-## DETECTING NETWORK NODES GENERATING FALSE ROUTING INFORMARION
+## DETECTING NETWORK NODES GENERATING FALSE ROUTING INFORMATION
 
 ## Web link : https://falserouting-detection.azurewebsites.net/
 
